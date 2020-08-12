@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Авг 09 2020 г., 15:41
+-- Время создания: Авг 12 2020 г., 18:34
 -- Версия сервера: 5.7.25
 -- Версия PHP: 7.3.9
 
@@ -30,16 +30,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
-  `user_name` varchar(66) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL
+  `json_data` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id_user`, `user_name`, `phone`) VALUES
-(1, 'kolya', '99');
+INSERT INTO `users` (`id_user`, `json_data`) VALUES
+(9, '{\"name\":\"Kolya\",\"phone\":\"44\"}'),
+(10, '{\"name\":\"kolya\",\"phone\":\"99\"}'),
+(11, '{\"name\":\"kolya\",\"phone\":\"99\"}'),
+(12, '{\"name\":\"Misha\",\"phone\":\"123\"}'),
+(13, '{\"name\":\"kolya\",\"phone\":\"2222\"}'),
+(14, '{\"name\":\"Mishka\",\"phone\":\"369\"}');
 
 --
 -- Индексы сохранённых таблиц
@@ -59,7 +63,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
