@@ -1,17 +1,19 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('.show_popup').click(function () {
         var popup_id = $('#' + $(this).attr("rel"));
         $(popup_id).show();
         $('.overlay_popup').show();
-        setTimeout(function(){ jQuery('.overlay_popup, .popup').hide(); }, 15000);
+        setTimeout(function () {
+            jQuery('.overlay_popup, .popup').hide();
+        }, 15000);
     });
     $('.overlay_popup').click(function () {
         $('.overlay_popup, .popup').hide();
     });
 
     $("#btn").click(
-        function(){
-            sendAjaxForm( 'ajax_form', 'action_ajax_form.php');
+        function () {
+            sendAjaxForm('ajax_form', 'action_ajax_form.php');
             return false;
         }
     );
@@ -19,13 +21,13 @@ $(document).ready(function() {
     $("#search").keyup(
         function () {
             let name = $('#search').val();
-            if (name === "" || name.length < 3){
+            if (name === "" || name.length < 3) {
                 $("#display").html("Введіть мінімум 3 символи");
             } else {
                 $.ajax({
-                    url : "find.php",
+                    url: "find.php",
                     type: "POST",
-                    data:{
+                    data: {
                         search: name
                     },
                     success: function (response) {
@@ -38,7 +40,7 @@ $(document).ready(function() {
     );
 });
 
-function fill (Value){
+function fill(Value) {
     $('#search').val(Value);
     $('#display').hide();
 }

@@ -1,18 +1,21 @@
-#name::placeholder, #phone::placeholder, #search::placeholder{
+#name::placeholder, #phone::placeholder, #search::placeholder {
     color: darkblue;
     opacity: 0.8;
 }
-#name, #phone, #search{
+
+#name, #phone, #search {
     background-color: aqua;
     border: 3px;
     border-radius: 5px;
     font-weight: bold;
     color: darkblue;
 }
-#ajax_form{
+
+#ajax_form {
     color: darkblue;
     font-weight: bold;
 }
+
 form {
     margin-top: 5%;
     margin-left: 10%;
@@ -26,16 +29,16 @@ form {
     border: aqua 5px solid;
 }
 
-#btn{
+#btn {
     border-color: lawngreen;
     border-radius: 5px;
     font-weight: bolder;
     color: lawngreen;
     margin-left: 20%;
     background-color: darkgreen;
-
 }
-.blue_btn{
+
+.blue_btn {
     background-color: darkblue;
     color: white;
     font-weight: bolder;
@@ -43,9 +46,9 @@ form {
     border: black 2px solid;
     margin-left: 40%;
     margin-top: 5%;
-
 }
-.overlay_popup{
+
+.overlay_popup {
     display: none;
     position: fixed;
     z-index: 999;
@@ -56,22 +59,26 @@ form {
     background: black;
     opacity: 0.5;
 }
-.popup{
+
+.popup {
     display: none;
     position: relative;
     z-index: 1000;
     margin: 0 25% 0 25%;
     width: 50%;
 }
-#allUsers{
+
+#allUsers {
     color: red;
     font-weight: bold;
 }
+
 td {
     color: darkblue;
     font-weight: bold;
     font-style: italic;
 }
+
 tr {
     color: darkblue;
     font-style: italic;

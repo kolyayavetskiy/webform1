@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     $.ajax({
         type: "POST",
         url: "all.php",
-        success: function(response) {
+        success: function (response) {
             $(".displayAll").html(response).show();
         }
     });
@@ -24,7 +24,6 @@ $(document).ready(function() {
                         $(".displayAll").html(response).show();
                     }
                 });
-
             }
         }
     );
