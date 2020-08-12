@@ -67,4 +67,14 @@ form {
     color: red;
     font-weight: bold;
 }
+td {
+    color: darkblue;
+    font-weight: bold;
+    font-style: italic;
+}
+tr {
+    color: darkblue;
+    font-style: italic;
+    font-weight: bold;
+}
 
