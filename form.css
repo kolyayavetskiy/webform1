@@ -1,8 +1,8 @@
-#name::placeholder, #phone::placeholder{
+#name::placeholder, #phone::placeholder, #search::placeholder{
     color: darkblue;
     opacity: 0.8;
 }
-#name, #phone{
+#name, #phone, #search{
     background-color: aqua;
     border: 3px;
     border-radius: 5px;
@@ -23,7 +23,7 @@ form {
     padding-right: 20%;
     background-color: darkcyan;
     border-radius: 10px;
-    border: aqua 3px dashed;
+    border: aqua 5px solid;
 }
 
 #btn{
@@ -63,3 +63,8 @@ form {
     margin: 0 25% 0 25%;
     width: 50%;
 }
+#allUsers{
+    color: red;
+    font-weight: bold;
+}
+

@@ -1,0 +1,30 @@
+form{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: orange;
+    border-radius: 10px;
+    border: darkorange 5px solid;
+}
+tr{
+    font-weight: bold;
+    color: red;
+    font-style: italic;
+}
+
+#searchAll::placeholder{
+    color: orange;
+    opacity: 0.8;
+}
+#searchAll{
+    background-color: red;
+    border: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: orange;
+
+}

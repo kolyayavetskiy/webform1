@@ -19,6 +19,6 @@
     } else {
         echo "Connection error!";
     }
-mysqli_close();
+mysqli_close($connect);
 
 
