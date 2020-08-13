@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Авг 12 2020 г., 18:34
+-- Время создания: Авг 13 2020 г., 11:25
 -- Версия сервера: 5.7.25
 -- Версия PHP: 7.3.9
 
@@ -43,7 +43,8 @@ INSERT INTO `users` (`id_user`, `json_data`) VALUES
 (11, '{\"name\":\"kolya\",\"phone\":\"99\"}'),
 (12, '{\"name\":\"Misha\",\"phone\":\"123\"}'),
 (13, '{\"name\":\"kolya\",\"phone\":\"2222\"}'),
-(14, '{\"name\":\"Mishka\",\"phone\":\"369\"}');
+(14, '{\"name\":\"Mishka\",\"phone\":\"369\"}'),
+(15, '{\"name\":\"kolya\",\"phone\":\"1597\"}');
 
 --
 -- Индексы сохранённых таблиц
@@ -63,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
