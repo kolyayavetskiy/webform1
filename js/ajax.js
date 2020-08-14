@@ -40,10 +40,6 @@ $(document).ready(function () {
     );
 });
 
-function fill(Value) {
-    $('#search').val(Value);
-    $('#display').hide();
-}
 
 function sendAjaxForm(ajax_form, url) {
     $.ajax({

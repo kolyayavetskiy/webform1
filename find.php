@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'webform');
+require_once "connection.php";
 $searchName = $_POST["search"];
 $query = "SELECT json_data FROM users WHERE json_data LIKE '%$searchName%'";
 $result = $mysqli->query($query)->fetch_all(MYSQLI_ASSOC);
@@ -10,7 +10,7 @@ if (empty($result)) {
     <?php
 } else {
     ?>
-    <link href="form.css" rel="stylesheet" type="text/css"/>
+    <link href="css/form.css" rel="stylesheet" type="text/css"/>
     <table class="table" id="fullUsersTable">
         <thead>
         <tr>

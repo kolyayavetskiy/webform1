@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'webform');
+require_once "connection.php";
 $query = "SELECT json_data FROM users";
 $Result = $mysqli->query($query)->fetch_all(MYSQLI_ASSOC);
 ?>
