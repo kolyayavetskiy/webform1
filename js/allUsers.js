@@ -27,3 +27,18 @@ function findingByName (name) {
         }
     });
 }
+
+function delete_ (name, phone)
+{
+    $.ajax({
+        type: "POST",
+        url: "../php/delete.php",
+        data: {
+            name: name,
+            phone: phone
+        },
+        success: function () {
+            findingByName(name);
+        }
+    });
+}

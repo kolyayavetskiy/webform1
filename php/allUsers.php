@@ -25,6 +25,7 @@ else {
             <td><?php echo $key + 1; ?></td>
             <td><?php echo $decoded->name; ?></td>
             <td><?php echo $decoded->phone . "<br>"; ?></td>
+            <td><input type="button" class = "btn btn-danger" value="Видалити" onclick='delete_("<?php echo $decoded->name; ?>", "<?php echo $decoded->phone; ?>")'/></td>
         </tr>
         </tbody>
         <?php
