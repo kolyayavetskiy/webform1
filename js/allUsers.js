@@ -3,9 +3,6 @@ $(document).ready(function () {
     let name = $('#searchAll').val();
     findingByName(name);
 
-
-
-
     $("#searchAll").keyup(
         function () {
             let name = $('#searchAll').val();
@@ -21,7 +18,7 @@ $(document).ready(function () {
 function findingByName (name) {
     $.ajax({
         type: "POST",
-        url: "allUsers.php",
+        url: "../php/allUsers.php",
         data: {
             searchAll: name
         },

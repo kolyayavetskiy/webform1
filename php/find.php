@@ -10,7 +10,7 @@ if (empty($result)) {
     <?php
 } else {
     ?>
-    <link href="css/form.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/form.css" rel="stylesheet" type="text/css"/>
     <table class="table" id="fullUsersTable">
         <?php
         foreach ($result as $key => $value) {
@@ -44,7 +44,7 @@ if (empty($result)) {
     <?php
     if ($countOfPeople >= 3) {
         ?>
-        <a href="allUsers.html" id="allUsers">Побачити всіх</a>
+        <a href="../html/allUsers.html" id="allUsers">Побачити всіх</a>
         <?php
     }
 }

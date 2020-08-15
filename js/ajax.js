@@ -1,13 +1,12 @@
 $(document).ready(function () {
     let form = document.forms;
-
     $('.show_popup').click(function () {
         var popup_id = $('#' + $(this).attr("rel"));
         $(popup_id).show();
         $('.overlay_popup').show();
-        setTimeout(function () {
+        /*setTimeout(function () {
             jQuery('.overlay_popup, .popup').hide();
-        }, 15000);
+        }, 10000);*/
         //$(".ajax_form").html(form[0]);
     });
     $('.overlay_popup').click(function () {
@@ -16,8 +15,7 @@ $(document).ready(function () {
 
     $("#btn").click(
         function () {
-            sendAjaxForm('ajax_form', 'action_ajax_form.php');
-            return false;
+            sendAjaxForm('ajax_form', '../php/action_ajax_form.php');
         }
     );
 
@@ -29,7 +27,7 @@ $(document).ready(function () {
             } else {
                 localStorage.setItem('searchAll', $('#search').val());
                 $.ajax({
-                    url: "find.php",
+                    url: "../php/find.php",
                     type: "POST",
                     data: {
                         search: name
@@ -65,6 +63,7 @@ function sendAjaxForm(ajax_form, url) {
         }
     });
 }
+
 
 
 
