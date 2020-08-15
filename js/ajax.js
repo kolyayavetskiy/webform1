@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    let form = document.forms;
+
     $('.show_popup').click(function () {
         var popup_id = $('#' + $(this).attr("rel"));
         $(popup_id).show();
@@ -6,6 +8,7 @@ $(document).ready(function () {
         setTimeout(function () {
             jQuery('.overlay_popup, .popup').hide();
         }, 15000);
+        //$(".ajax_form").html(form[0]);
     });
     $('.overlay_popup').click(function () {
         $('.overlay_popup, .popup').hide();
@@ -24,6 +27,7 @@ $(document).ready(function () {
             if (name === "" || name.length < 3) {
                 $("#display").html("Введіть мінімум 3 символи");
             } else {
+                localStorage.setItem('searchAll', $('#search').val());
                 $.ajax({
                     url: "find.php",
                     type: "POST",
@@ -38,6 +42,9 @@ $(document).ready(function () {
             }
         }
     );
+
+
+
 });
 
 

@@ -12,16 +12,14 @@ if (empty($result)) {
     ?>
     <link href="css/form.css" rel="stylesheet" type="text/css"/>
     <table class="table" id="fullUsersTable">
-        <thead>
-        <tr>
-            <th></th>
-            <th>№</th>
-            <th>Ім'я</th>
-        </tr>
-        </thead>
         <?php
         foreach ($result as $key => $value) {
             $decoded = json_decode($value['json_data']);
+            if (!stristr($decoded->name, $searchName)){?>
+                <b><br>Збігів не знайдено</b>
+                <?php
+                break;
+            }
             ?>
             <i><b>
                     <tbody>

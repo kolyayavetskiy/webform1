@@ -10,17 +10,14 @@ if (empty($result)){
 else {
 ?>
 <table class="table" id="fullUsersTable">
-    <thead>
-    <tr>
-        <th></th>
-        <th>№</th>
-        <th>Ім'я</th>
-        <th>Телефон</th>
-    </tr>
-    </thead>
     <?php
     foreach ($result as $key => $value) {
         $decoded = json_decode($value['json_data']);
+        if (!stristr($decoded->name, $searchName)){?>
+            <b><br>Збігів не знайдено</b>
+            <?php
+            break;
+        }
         ?>
         <tbody>
         <tr>

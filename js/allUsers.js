@@ -1,12 +1,10 @@
 $(document).ready(function () {
+    $('#searchAll').val(localStorage.getItem('searchAll'));
+    let name = $('#searchAll').val();
+    findingByName(name);
 
-    $.ajax({
-        type: "POST",
-        url: "all.php",
-        success: function (response) {
-            $(".displayAll").html(response).show();
-        }
-    });
+
+
 
     $("#searchAll").keyup(
         function () {
@@ -14,17 +12,21 @@ $(document).ready(function () {
             if (name === "" || name.length < 3) {
                 $(".displayAll").html("Введіть мінімум 3 символи");
             } else {
-                $.ajax({
-                    url: "allUsers.php",
-                    type: "POST",
-                    data: {
-                        searchAll: name
-                    },
-                    success: function (response) {
-                        $(".displayAll").html(response).show();
-                    }
-                });
+                findingByName(name);
             }
         }
     );
 });
+
+function findingByName (name) {
+    $.ajax({
+        type: "POST",
+        url: "allUsers.php",
+        data: {
+            searchAll: name
+        },
+        success: function(response) {
+            $(".displayAll").html(response).show();
+        }
+    });
+}
