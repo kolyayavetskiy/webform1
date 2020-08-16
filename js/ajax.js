@@ -1,18 +1,20 @@
 $(document).ready(function () {
-    let form = document.forms;
     $('.show_popup').click(function () {
         var popup_id = $('#' + $(this).attr("rel"));
         $(popup_id).show();
         $('.overlay_popup').show();
-        /*setTimeout(function () {
+        $("#ajax_form").removeClass("hidden");
+        $("#name").val("");
+        $("#phone").val("");
+        $(".alert").addClass("hidden");
+        setTimeout(function () {
             jQuery('.overlay_popup, .popup').hide();
-        }, 10000);*/
-        //$(".ajax_form").html(form[0]);
+        }, 15000);
+        clearTimeout();
     });
     $('.overlay_popup').click(function () {
         $('.overlay_popup, .popup').hide();
     });
-
     $("#btn").click(
         function () {
             sendAjaxForm('ajax_form', '../php/action_ajax_form.php');
@@ -40,30 +42,21 @@ $(document).ready(function () {
             }
         }
     );
-
-
-
 });
-
 
 function sendAjaxForm(ajax_form, url) {
     $.ajax({
         url: url,
         type: "POST",
         data: $("#" + ajax_form).serialize(),
-        success: function (data) {
-            //data = JSON.parse(data);
+        success: function () {
 
-            $('#' + ajax_form).html('Дякуємо, ' + $("#name").val() + ':) Очікуйте повідомлення.');
-
-            //$('#'+ ajax_form ).html("Дякуємо, " + data["name"] + ':) Очікуйте повідомлення на номер ' + data["phone"]);
-        },
-        error: function () {
-            $('#ajax_form').html('Помилка. Дані не відправлені.');
+            $("#" + ajax_form).addClass("hidden");
+            let p = document.createElement('p');
+            p.className = "alert";
+            let text = document.createTextNode('Дякуємо, ' + $("#name").val() + ':) Очікуйте повідомлення.');
+            p.appendChild(text);
+            $(".object").append(p);
         }
     });
 }
-
-
-
-

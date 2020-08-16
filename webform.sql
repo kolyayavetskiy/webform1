@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Авг 15 2020 г., 19:49
+-- Время создания: Авг 16 2020 г., 19:04
 -- Версия сервера: 5.7.25
 -- Версия PHP: 7.3.9
 
@@ -38,14 +38,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `json_data`) VALUES
-(9, '{\"name\":\"Kolya\",\"phone\":\"44\"}'),
-(10, '{\"name\":\"kolya\",\"phone\":\"99\"}'),
-(11, '{\"name\":\"kolya\",\"phone\":\"99\"}'),
-(13, '{\"name\":\"kolya\",\"phone\":\"2222\"}'),
-(15, '{\"name\":\"kolya\",\"phone\":\"1597\"}'),
 (16, '{\"name\":\"vanya\",\"phone\":\"159\"}'),
 (17, '{\"name\":\"Vanya\",\"phone\":\"36954\"}'),
-(18, '{\"name\":\"misha\",\"phone\":\"666\"}');
+(31, '{\"name\":\"kolya\",\"phone\":\"159\"}'),
+(32, '{\"name\":\"vanya\",\"phone\":\"333\"}'),
+(75, '{\"name\":\"kolya\",\"phone\":\"32145\"}');
 
 --
 -- Индексы сохранённых таблиц
@@ -65,7 +62,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

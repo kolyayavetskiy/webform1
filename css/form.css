@@ -16,7 +16,7 @@
     font-weight: bold;
 }
 
-form {
+form, .alert {
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
@@ -27,6 +27,8 @@ form {
     background-color: darkcyan;
     border-radius: 10px;
     border: aqua 5px solid;
+    font-weight: bold;
+    color: blue;
 }
 
 #btn {
@@ -83,5 +85,10 @@ tr {
     color: darkblue;
     font-style: italic;
     font-weight: bold;
+}
+
+.hidden {
+    display: none;
+    visibility: inherit;
 }
 
