@@ -15,8 +15,13 @@
     color: darkblue;
     font-weight: bold;
 }
-
-form, .alert {
+.alert{
+    margin-top: 10%;
+    font-weight: bold;
+    color: blue;
+    background-color: aqua;
+}
+form {
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
@@ -27,8 +32,7 @@ form, .alert {
     background-color: darkcyan;
     border-radius: 10px;
     border: aqua 5px solid;
-    font-weight: bold;
-    color: blue;
+
 }
 
 #btn {

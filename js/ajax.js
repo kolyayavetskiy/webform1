@@ -9,8 +9,8 @@ $(document).ready(function () {
         $(".alert").addClass("hidden");
         setTimeout(function () {
             jQuery('.overlay_popup, .popup').hide();
-        }, 15000);
-        clearTimeout();
+        }, 25000);
+
     });
     $('.overlay_popup').click(function () {
         $('.overlay_popup, .popup').hide();
@@ -52,11 +52,11 @@ function sendAjaxForm(ajax_form, url) {
         success: function () {
 
             $("#" + ajax_form).addClass("hidden");
-            let p = document.createElement('p');
-            p.className = "alert";
-            let text = document.createTextNode('Дякуємо, ' + $("#name").val() + ':) Очікуйте повідомлення.');
-            p.appendChild(text);
-            $(".object").append(p);
+            let tmp = document.createElement('p');
+            tmp.className = "alert";
+            let message = document.createTextNode('Дякуємо, ' + $("#name").val() + ':) Очікуйте повідомлення.');
+            tmp.appendChild(message);
+            $(".object").append(tmp);
         }
     });
 }
