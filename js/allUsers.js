@@ -15,21 +15,20 @@ $(document).ready(function () {
     );
 });
 
-function findingByName (name) {
+function findingByName(name) {
     $.ajax({
         type: "POST",
         url: "../php/allUsers.php",
         data: {
             searchAll: name
         },
-        success: function(response) {
+        success: function (response) {
             $(".displayAll").html(response).show();
         }
     });
 }
 
-function delete_ (name, phone)
-{
+function delete_(name, phone) {
     $.ajax({
         type: "POST",
         url: "../php/delete.php",
@@ -40,5 +39,33 @@ function delete_ (name, phone)
         success: function () {
             findingByName(name);
         }
+    });
+}
+
+function update(oldName, oldPhone) {
+    $("#update_form").removeClass('hidden');
+    $("#updateName").val(oldName);
+    $("#updatePhone").val(oldPhone);
+
+
+    $("#btnUpdate").click(function () {
+        let upName = $("#updateName").val();
+        let upPhone = $("#updatePhone").val();
+
+        $.ajax({
+            type: "POST",
+            url: "../php/update.php",
+            data: {
+                oldName: oldName,
+                oldPhone: oldPhone,
+                newName: upName,
+                newPhone: upPhone
+            },
+            success: function () {
+                findingByName(upName);
+                $("#searchAll").val(upName);
+                $("#update_form").addClass("hidden");
+            }
+        });
     });
 }

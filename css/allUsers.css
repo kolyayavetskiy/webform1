@@ -17,15 +17,19 @@ tr {
     font-style: italic;
 }
 
-#searchAll::placeholder {
+#searchAll::placeholder, #updateName::placeholder, #updatePhone ::placeholder {
     color: orange;
     opacity: 0.8;
 }
 
-#searchAll {
+#searchAll, #updateName, #updatePhone {
     background-color: red;
     border: 3px;
     border-radius: 5px;
     font-weight: bold;
     color: orange;
+}
+.hidden {
+    display: none;
+    visibility: inherit;
 }

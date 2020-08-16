@@ -25,8 +25,8 @@ else {
             <td><?php echo $key + 1; ?></td>
             <td><?php echo $decoded->name; ?></td>
             <td><?php echo $decoded->phone . "<br>"; ?></td>
-            <td><input type="button" class = "btn btn-warning font-weight-bold text-dark" value="Редагувати" onclick=''/></td>
-            <td><input type="button" class = "btn btn-danger font-weight-bold text-dark" value="Видалити" onclick='delete_("<?php echo $decoded->name; ?>", "<?php echo $decoded->phone; ?>")'/></td>
+            <td><input type="button" id="update_btn" class = "btn btn-warning font-weight-bold text-dark" value="Редагувати" onclick='update("<?php echo $decoded->name; ?>", "<?php echo $decoded->phone; ?>")'/></td>
+            <td><input type="button" id="delete_btn" class = "btn btn-danger font-weight-bold text-dark" value="Видалити" onclick='delete_("<?php echo $decoded->name; ?>", "<?php echo $decoded->phone; ?>")'/></td>
         </tr>
         </tbody>
         <?php
